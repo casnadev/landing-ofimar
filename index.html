@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>OFIMAR Perú | Imprenta y merchandising personalizado en el Centro de Lima</title>
+<meta name="description" content="Tazas, vasos térmicos, mugs, lanyards, pines, libretas y lapiceros con tu logo. Imprenta, sellos y regalos corporativos en el C.C. Centro Lima. Cotiza por WhatsApp." />
+<meta property="og:title" content="OFIMAR Perú | Tu logo en lo que tus clientes usan todos los días" />
+<meta property="og:description" content="Merchandising personalizado, imprenta y sellos en el Centro de Lima. Cotiza por WhatsApp." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="img/tienda-centro-lima.webp" />
+<meta name="theme-color" content="#6C00FF" />
+<link rel="icon" href="img/logo-ofimar.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!--
+  ═══════════════════════════════════════════════════════════════════════
+  CÓMO EDITAR ESTA PÁGINA
+  ───────────────────────────────────────────────────────────────────────
+  VIDEO DEL HERO → guarda el video como  img/video-tienda.mp4
+    · Formato MP4 (H.264), sin audio, 10 a 20 segundos, 1280×720 o 1920×1080.
+    · Ideal: menos de 6 MB para que cargue rápido en el celular.
+    · Opcional: una versión vertical para celular como img/video-tienda-movil.mp4
+      (720×1280). Si existe, se usa automáticamente en pantallas pequeñas.
+    · Mientras no exista el video, se muestra la foto de la tienda.
+
+  WHATSAPP → número en la constante WA del <script> y en los enlaces wa.me/51989997461
+
+  FOTOS → carpeta img/. Reemplaza el archivo con el mismo nombre para cambiarla.
+
+  POR CONFIRMAR (busca "CONFIRMAR"): horario, envíos y permiso para mostrar
+  los logos de los clientes en los ejemplos.
+  ═══════════════════════════════════════════════════════════════════════
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "OFIMAR Perú S.A.C.",
+  "description": "Imprenta y merchandising personalizado",
+  "telephone": "+51989997461",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Bolivia 148, C.C. Centro Lima, Tiendas 248-249, Pasaje E, Sótano",
+    "addressLocality": "Lima",
+    "postalCode": "15001",
+    "addressCountry": "PE"
+  }
+}
+</script>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════
+   OFIMAR PERÚ — Landing v2
+   Violeta eléctrico de marca + magenta, amarillo y celeste de los letreros.
+   Tipografía: Archivo.
+   ═══════════════════════════════════════════════════════════════════════ */
+:root{
+  --violet:   #6C00FF;
+  --violet-2: #5200C4;
+  --deep:     #2A0A6B;
+  --night:    #1A0850;
+  --magenta:  #FF2D8A;
+  --yellow:   #FFD400;
+  --cyan:     #00C2FF;
+  --lilac:    #F5F0FF;
+  --lilac-2:  #E1D7FA;
+  --ink:      #1A1033;
+  --body:     #3D3456;
+  --on-dark:  #E4DAFF;
+  --wa:       #25D366;
+  --wa-ink:   #06301A;
+  --wa-2:     #1FB457;
+
+  --font: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --wrap: 1280px;
+  --pad: 80px;
+  --head-h: 80px;
+  --sec: 110px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+:root{ padding-top:env(safe-area-inset-top, 0px); padding-bottom:env(safe-area-inset-bottom, 0px); }
+html{ scroll-behavior:smooth; scroll-padding-top:calc(var(--head-h) + 12px + env(safe-area-inset-top, 0px)); -webkit-text-size-adjust:100%; }
+body{ margin:0; background:#fff; color:var(--ink); font-family:var(--font); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+img, video{ max-width:100%; display:block; }
+a{ color:inherit; }
+p{ margin:0; }
+h1,h2,h3{ margin:0; color:var(--ink); font-weight:800; }
+h3{ line-height:1.2; }
+h2{ font-size:clamp(2rem, 3.8vw, 3.4rem); line-height:1.08; letter-spacing:-.02em; }
+button,input,select,textarea{ font:inherit; }
+:focus-visible{ outline:3px solid var(--yellow); outline-offset:3px; border-radius:6px; }
+
+.skip{ position:absolute; left:-9999px; top:10px; z-index:300; background:var(--ink); color:#fff; padding:12px 18px; }
+.skip:focus{ left:12px; }
+.wrap{ width:100%; max-width:calc(var(--wrap) + var(--pad) * 2); margin:0 auto; padding:0 var(--pad); }
+.sec{ padding:var(--sec) 0; }
+.lead{ margin-top:16px; font-size:1.15rem; color:var(--body); max-width:56ch; }
+
+/* ── Botones ───────────────────────────────────────── */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  min-height:56px; padding:0 28px; border-radius:999px; border:2px solid transparent;
+  font-weight:800; font-size:1.05rem; text-decoration:none; cursor:pointer; white-space:nowrap;
+  transition:background-color .2s, color .2s, border-color .2s, transform .2s;
+}
+.btn svg{ width:22px; height:22px; flex:none; }
+.btn--wa{ background:var(--wa); color:var(--wa-ink); }
+.btn--wa:hover{ background:var(--wa-2); }
+.btn--violet{ background:var(--violet); color:#fff; font-weight:700; }
+.btn--violet:hover{ background:var(--violet-2); }
+.btn--line{ border-color:#fff; color:#fff; font-weight:700; }
+.btn--line:hover{ background:#fff; color:var(--deep); }
+.btn--sm{ min-height:48px; padding:0 22px; font-size:1rem; }
+
+/* ── Header ────────────────────────────────────────── */
+.header{
+  position:sticky; top:env(safe-area-inset-top, 0px); z-index:100;
+  background:rgba(255,255,255,.96); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid #ECE6FA;
+}
+.headerIn{ height:var(--head-h); display:flex; align-items:center; gap:36px; }
+.logo img{ height:48px; width:auto; }
+.nav{ display:flex; gap:32px; margin-left:auto; }
+.nav a{ text-decoration:none; font-weight:600; font-size:1rem; padding:6px 0; border-bottom:2px solid transparent; }
+.nav a:hover{ color:var(--violet); border-bottom-color:var(--violet); }
+.menuBtn{ display:none; margin-left:auto; width:46px; height:46px; border-radius:14px; border:1.5px solid var(--lilac-2); background:#fff; color:var(--ink); cursor:pointer; align-items:center; justify-content:center; }
+.menuBtn svg{ width:22px; height:22px; }
+.mobileNav{ display:none; }
+
+/* ── Hero con video ────────────────────────────────── */
+.hero{ position:relative; min-height:760px; display:flex; overflow:hidden; background:var(--deep); isolation:isolate; }
+.heroMedia{ position:absolute; inset:0; z-index:-2; }
+.heroMedia img, .heroMedia video{ width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
+.heroMedia video{ position:absolute; inset:0; }
+.hero::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(90deg, rgba(42,10,107,.96) 0%, rgba(42,10,107,.86) 38%, rgba(42,10,107,.25) 70%, rgba(42,10,107,.05) 100%);
+}
+.heroIn{ width:100%; padding-top:80px; padding-bottom:80px; display:flex; flex-direction:column; justify-content:center; gap:26px; }
+.heroCopy{ max-width:700px; display:flex; flex-direction:column; gap:26px; }
+.place{
+  align-self:flex-start; display:inline-flex; align-items:center; gap:9px;
+  padding:8px 16px; border-radius:999px; background:var(--yellow); color:var(--ink);
+  font-weight:700; font-size:.95rem;
+}
+.place svg{ width:18px; height:18px; }
+.hero h1{ color:#fff; font-size:clamp(2.5rem, 5.4vw, 4.75rem); line-height:1.04; letter-spacing:-.02em; }
+.heroLead{ color:#EFE8FF; font-size:1.3rem; line-height:1.55; max-width:36ch; }
+.heroCtas{ display:flex; flex-wrap:wrap; gap:14px; }
+.pills{ display:flex; flex-wrap:wrap; gap:10px; }
+.pill{ padding:9px 16px; border-radius:999px; background:rgba(255,255,255,.14); color:#fff; font-size:.95rem; font-weight:600; }
+.pauseBtn{
+  position:absolute; right:40px; bottom:36px; width:52px; height:52px; border-radius:50%;
+  border:0; background:rgba(255,255,255,.92); color:var(--deep); cursor:pointer;
+  display:none; align-items:center; justify-content:center;
+}
+.pauseBtn svg{ width:20px; height:20px; }
+.hero.has-video .pauseBtn{ display:flex; }
+.trustStrip{ display:none; }
+
+@media (prefers-reduced-motion: no-preference){
+  .heroCopy > *{ animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .heroCopy > *:nth-child(2){ animation-delay:.07s; }
+  .heroCopy > *:nth-child(3){ animation-delay:.14s; }
+  .heroCopy > *:nth-child(4){ animation-delay:.21s; }
+  .heroCopy > *:nth-child(5){ animation-delay:.28s; }
+  @keyframes rise{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:none; } }
+}
+
+/* ── Productos ─────────────────────────────────────── */
+.productos{ background:var(--lilac); }
+.prodHead{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:56px; }
+.prodGrid{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:24px; }
+.prod{ display:flex; flex-direction:column; gap:18px; }
+.tile{ height:300px; border-radius:28px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.tile img{ height:var(--h, 200px); width:auto; max-width:85%; object-fit:contain; filter:drop-shadow(0 16px 18px rgba(26,8,80,.28)); transition:transform .3s ease; }
+.prod:hover .tile img{ transform:scale(1.05) rotate(-2deg); }
+.tile--violet{ background:var(--violet); }
+.tile--yellow{ background:var(--yellow); }
+.tile--magenta{ background:var(--magenta); }
+.tile--cyan{ background:var(--cyan); }
+.prod h3{ font-size:1.35rem; line-height:1.2; }
+.prod p{ margin-top:6px; font-size:1rem; line-height:1.5; color:var(--body); }
+.more{ height:300px; border-radius:28px; background:var(--deep); padding:34px; display:flex; flex-direction:column; gap:16px; }
+.more h3{ color:var(--yellow); font-size:1.5rem; }
+.more ul{ margin:0; padding:0; list-style:none; display:grid; gap:9px; color:#fff; font-weight:600; font-size:1.05rem; }
+
+/* ── Por rubro ─────────────────────────────────────── */
+.tabs{ display:flex; flex-wrap:wrap; gap:12px; margin:40px 0 28px; }
+.tab{
+  min-height:52px; padding:0 24px; border-radius:999px; cursor:pointer;
+  border:2px solid var(--lilac-2); background:#fff; color:var(--ink);
+  font-weight:700; font-size:1rem; transition:background-color .2s, color .2s, border-color .2s;
+}
+.tab:hover{ border-color:var(--violet); }
+.tab[aria-selected="true"]{ background:var(--violet); border-color:var(--violet); color:#fff; }
+.panel{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); border-radius:32px; overflow:hidden; background:var(--lilac); min-height:460px; }
+.panelMedia{ display:flex; align-items:center; justify-content:center; overflow:hidden; background:var(--violet); transition:background-color .3s; }
+.panelMedia img{ height:var(--h, 280px); width:auto; max-width:85%; object-fit:contain; filter:drop-shadow(0 18px 20px rgba(26,8,80,.3)); }
+.panelMedia.is-photo img{ width:100%; height:100%; max-width:none; object-fit:cover; filter:none; }
+.panelTxt{ padding:56px; display:flex; flex-direction:column; justify-content:center; gap:20px; }
+.panelTxt h3{ font-size:clamp(1.6rem, 2.6vw, 2.3rem); line-height:1.12; }
+.panelTxt p{ color:var(--body); }
+.picks{ margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
+.picks li{ padding:8px 16px; border-radius:999px; background:#fff; color:var(--violet-2); font-weight:700; font-size:.95rem; }
+.panelTxt .btn{ align-self:flex-start; margin-top:6px; }
+@media (prefers-reduced-motion: no-preference){
+  .panel.is-swapping .panelMedia img, .panel.is-swapping .panelTxt > *{ animation:swap .35s ease both; }
+  @keyframes swap{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+}
+
+/* ── Pedidos reales ────────────────────────────────── */
+.pedidos{ background:var(--deep); }
+.pedidosGrid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:72px; align-items:center; }
+.pedidoPhoto{ position:relative; margin:0; }
+.pedidoPhoto img{ width:100%; height:480px; object-fit:cover; border-radius:28px; }
+.tag{ position:absolute; left:24px; bottom:24px; padding:10px 18px; border-radius:999px; background:var(--yellow); color:var(--ink); font-weight:800; font-size:1rem; }
+.pedidos h2{ color:#fff; }
+.pedidos .lead{ color:var(--on-dark); }
+.checks{ list-style:none; margin:30px 0 0; padding:0; display:grid; gap:14px; }
+.checks li{ display:flex; align-items:center; gap:14px; color:#fff; font-weight:600; font-size:1.1rem; }
+.checks span{ width:36px; height:36px; border-radius:50%; background:var(--magenta); display:flex; align-items:center; justify-content:center; flex:none; }
+.checks svg{ width:18px; height:18px; }
+
+/* ── Cómo pedir ────────────────────────────────────── */
+.steps{ list-style:none; margin:56px 0 0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:24px; counter-reset:step; }
+.step{ padding:32px; border-radius:24px; background:var(--lilac); display:flex; flex-direction:column; gap:14px; counter-increment:step; }
+.step::before{
+  content:counter(step); width:56px; height:56px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800; font-size:1.5rem; background:var(--violet); color:#fff;
+}
+.step:nth-child(2)::before{ background:var(--magenta); }
+.step:nth-child(3)::before{ background:var(--yellow); color:var(--ink); }
+.step:nth-child(4)::before{ background:var(--cyan); color:var(--ink); }
+.step h3{ font-size:1.35rem; }
+.step p{ font-size:1rem; line-height:1.55; color:var(--body); }
+
+/* ── Contacto ──────────────────────────────────────── */
+.contacto{ padding:0 0 var(--sec); }
+.ctaBox{ border-radius:36px; background:var(--violet); padding:72px; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:64px; align-items:start; }
+.ctaBox h2{ color:#fff; }
+.ctaBox .lead{ color:#EFE8FF; }
+.info{ list-style:none; margin:32px 0 0; padding:0; display:grid; gap:18px; color:#fff; font-size:1.05rem; }
+.info li{ display:flex; gap:12px; align-items:flex-start; }
+.info svg{ width:22px; height:22px; flex:none; margin-top:3px; color:var(--yellow); }
+.info a{ color:#fff; font-weight:700; }
+.ctaBox .btn--line{ margin-top:30px; }
+.form{ background:#fff; border-radius:28px; padding:40px; display:grid; gap:18px; }
+.row2{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; }
+.field{ min-width:0; }
+.field{ display:flex; flex-direction:column; gap:8px; }
+.field label{ font-weight:700; font-size:.95rem; }
+.field .opt{ font-weight:400; color:#6B6283; }
+.field input, .field select, .field textarea{
+  width:100%; min-height:52px; padding:12px 16px; border-radius:14px;
+  border:1.5px solid #D9CFF5; background:#FBF9FF; color:var(--ink); font-size:1rem;
+}
+.field textarea{ min-height:104px; resize:vertical; }
+.field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--violet); box-shadow:0 0 0 4px rgba(108,0,255,.18); }
+.err{ display:none; color:#B42318; font-size:.88rem; }
+.field.is-bad input{ border-color:#B42318; }
+.field.is-bad .err{ display:block; }
+.formNote{ font-size:.88rem; color:#6B6283; }
+.btn--block{ width:100%; }
+
+/* ── Footer ────────────────────────────────────────── */
+.footer{ background:var(--night); color:#CBBFF0; padding:56px 0 36px; }
+.footIn{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:28px 56px; }
+.footer img{ height:56px; width:auto; }
+.footer p{ margin-top:14px; font-size:1rem; }
+.footLinks{ display:flex; flex-wrap:wrap; gap:14px 28px; }
+.footLinks a{ color:#fff; text-decoration:none; font-weight:700; }
+.footLinks a:hover{ color:var(--yellow); }
+.footBottom{ margin-top:40px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12); font-size:.9rem; }
+
+/* ── WhatsApp flotante ─────────────────────────────── */
+.waFloat{
+  position:fixed; right:18px; bottom:calc(18px + env(safe-area-inset-bottom, 0px)); z-index:120;
+  width:60px; height:60px; border-radius:50%; background:var(--wa); color:#fff;
+  display:flex; align-items:center; justify-content:center; box-shadow:0 14px 28px -10px rgba(0,0,0,.45);
+}
+.waFloat svg{ width:32px; height:32px; }
+.waFloat:hover{ background:var(--wa-2); }
+.waFloat{ transition:opacity .25s, transform .25s; }
+.waFloat.is-hidden{ opacity:0; transform:scale(.8); pointer-events:none; }
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 1180px){
+  :root{ --pad:48px; }
+  .nav{ gap:22px; }
+  .prodGrid{ grid-template-columns:repeat(3, minmax(0,1fr)); }
+  .steps{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+  .ctaBox{ padding:56px; gap:48px; }
+}
+@media (max-width: 960px){
+  :root{ --sec:88px; }
+  .nav, .headerCta{ display:none; }
+  .menuBtn{ display:flex; }
+  .mobileNav{ display:none; flex-direction:column; padding:6px var(--pad) 18px; background:#fff; border-top:1px solid #ECE6FA; }
+  .mobileNav.is-open{ display:flex; }
+  .mobileNav a{ padding:14px 0; font-weight:700; text-decoration:none; border-bottom:1px solid #ECE6FA; }
+  .mobileNav .btn{ margin-top:16px; border-bottom:0; }
+  .prodGrid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+  .panel{ grid-template-columns:minmax(0,1fr); }
+  .panelMedia{ height:320px; }
+  .panelTxt{ padding:36px; }
+  .pedidosGrid{ grid-template-columns:minmax(0,1fr); gap:40px; }
+  .ctaBox{ grid-template-columns:minmax(0,1fr); }
+}
+
+/* Celular: el video manda */
+@media (max-width: 720px){
+  :root{ --pad:18px; --head-h:66px; --sec:56px; }
+  body{ font-size:17px; }
+  .logo img{ height:38px; }
+
+  .hero{ min-height:calc(100svh - var(--head-h)); }
+  .heroIn{ padding-top:180px; }
+  .heroMedia img, .heroMedia video{ object-position:45% 20%; }
+  .hero::after{ background:linear-gradient(180deg, rgba(42,10,107,0) 28%, rgba(42,10,107,.78) 56%, rgba(42,10,107,.97) 100%); }
+  .heroIn{ justify-content:flex-end; padding-bottom:28px; }
+  .heroCopy{ gap:16px; }
+  .place{ font-size:.82rem; padding:7px 13px; }
+  .hero h1{ font-size:2.5rem; line-height:1.08; }
+  .heroLead{ font-size:1.05rem; }
+  .heroCtas .btn{ width:100%; }
+  .heroCtas .btn--line, .hero .pills{ display:none; }
+  .pauseBtn{ top:16px; right:16px; bottom:auto; width:44px; height:44px; }
+  .trustStrip{ display:flex; gap:8px; overflow-x:auto; padding:16px var(--pad); background:var(--deep); scrollbar-width:none; }
+  .trustStrip::-webkit-scrollbar{ display:none; }
+  .trustStrip .pill{ flex:none; font-size:.82rem; padding:8px 13px; }
+
+  .prodHead{ flex-direction:column; align-items:flex-start; gap:20px; margin-bottom:28px; }
+  .prodGrid{ gap:14px; }
+  .prod{ gap:10px; }
+  .tile{ height:170px; border-radius:22px; }
+  .tile img{ height:calc(var(--h, 200px) * .58); }
+  .prod h3{ font-size:1.05rem; }
+  .prod p{ display:none; }
+  .more{ height:auto; min-height:170px; border-radius:22px; padding:18px; gap:8px; }
+  .more h3{ font-size:1.05rem; }
+  .more ul{ display:block; font-size:.88rem; line-height:1.5; }
+  .more li{ display:inline; }
+  .more li:not(:last-child)::after{ content:", "; }
+
+  .tabs{ flex-wrap:nowrap; overflow-x:auto; margin:22px calc(var(--pad) * -1) 20px; padding:0 var(--pad) 4px; scrollbar-width:none; }
+  .tabs::-webkit-scrollbar{ display:none; }
+  .tab{ flex:none; min-height:44px; padding:0 16px; font-size:.95rem; }
+  .panel{ border-radius:26px; min-height:0; }
+  .panelMedia{ height:240px; }
+  .panelMedia img{ height:calc(var(--h, 280px) * .6); }
+  .panelTxt{ padding:24px; gap:14px; }
+  .panelTxt h3{ font-size:1.5rem; }
+  .panelTxt .btn{ align-self:stretch; }
+
+  .pedidoPhoto img{ height:260px; border-radius:22px; }
+  .tag{ left:14px; bottom:14px; font-size:.88rem; padding:8px 14px; }
+  .checks li{ font-size:1rem; }
+
+  .steps{ grid-template-columns:minmax(0,1fr); gap:12px; margin-top:24px; }
+  .step{ display:grid; grid-template-columns:44px 1fr; column-gap:16px; row-gap:4px; padding:20px; border-radius:20px; }
+  .step::before{ width:44px; height:44px; font-size:1.2rem; grid-row:span 2; }
+  .step h3{ font-size:1.1rem; }
+  .step p{ font-size:.95rem; }
+
+  .ctaBox{ border-radius:28px; padding:32px 20px; gap:28px; }
+  .form{ padding:22px; border-radius:22px; }
+  .row2{ grid-template-columns:minmax(0,1fr); }
+  .ctaBox .btn--line{ width:100%; }
+}
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ transition:none !important; animation:none !important; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="header">
+  <div class="wrap headerIn">
+    <a class="logo" href="#top" aria-label="OFIMAR Perú, ir al inicio"><img src="img/logo-ofimar.png" alt="OFIMAR Perú S.A.C." width="135" height="48" /></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#productos">Productos</a>
+      <a href="#rubros">Por rubro</a>
+      <a href="#pedidos">Pedidos</a>
+      <a href="#pasos">Cómo pedir</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--wa btn--sm headerCta" data-wa href="https://wa.me/51989997461" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar
+    </a>
+    <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="mobileNav" id="mobileNav" aria-label="Secciones">
+    <a href="#productos">Productos</a>
+    <a href="#rubros">Por rubro</a>
+    <a href="#pedidos">Pedidos</a>
+    <a href="#pasos">Cómo pedir</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn btn--wa" data-wa href="https://wa.me/51989997461" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ══════════ HERO CON VIDEO ══════════ -->
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <div class="heroMedia">
+    <img src="img/tienda-centro-lima.webp" alt="" fetchpriority="high" />
+    <!-- VIDEO: se carga desde img/video-tienda.mp4 (ver instrucciones arriba) -->
+    <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"
+      data-src="img/video-tienda.mp4" data-src-mobile="img/video-tienda-movil.mp4"></video>
+  </div>
+
+  <div class="wrap heroIn">
+    <div class="heroCopy">
+      <span class="place">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        C.C. Centro Lima, tiendas 248 y 249
+      </span>
+      <h1 id="heroTitle">Tu logo en lo que tus clientes usan todos los días</h1>
+      <p class="heroLead">Tazas, vasos térmicos, lanyards, pines, libretas y lapiceros personalizados con tu marca. También imprenta, sellos y regalos corporativos.</p>
+      <div class="heroCtas">
+        <a class="btn btn--wa" data-wa href="https://wa.me/51989997461" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp
+        </a>
+        <a class="btn btn--line" href="#productos">Ver productos</a>
+      </div>
+      <div class="pills">
+        <span class="pill">Pagas con Yape o Plin</span>
+        <span class="pill">Para empresas y emprendedores</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="pauseBtn" id="pauseBtn" type="button" aria-label="Pausar video">
+    <svg id="icoPause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    <svg id="icoPlay" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><path d="M8 5v14l11-7z"/></svg>
+  </button>
+</section>
+
+<div class="trustStrip" aria-label="Datos de la tienda">
+  <span class="pill">Yape o Plin</span>
+  <span class="pill">Empresas y emprendedores</span>
+  <span class="pill">Sellos y enmicados</span>
+  <span class="pill">Imprenta</span>
+</div>
+
+<!-- ══════════ PRODUCTOS ══════════ -->
+<section class="sec productos" id="productos" aria-labelledby="prodTitle">
+  <div class="wrap">
+    <div class="prodHead">
+      <div>
+        <h2 id="prodTitle">Productos que llevan tu marca</h2>
+        <p class="lead">Los que más personalizamos. Si buscas algo que no está aquí, pregúntanos: tenemos mucho más en tienda.</p>
+      </div>
+      <a class="btn btn--violet" href="https://wa.me/51989997461?text=Hola%20OFIMAR%2C%20quisiera%20ver%20su%20cat%C3%A1logo%20completo" target="_blank" rel="noopener">Pedir catálogo completo</a>
+    </div>
+
+    <div class="prodGrid">
+      <article class="prod"><div class="tile tile--violet"><img src="img/taza-corcho.webp" alt="Taza negra con tapa y base de corcho, con logo" style="--h:190px" loading="lazy" /></div><div><h3>Tazas con base de corcho</h3><p>Con tapa y tu logo. Un clásico para kits de bienvenida.</p></div></article>
+      <article class="prod"><div class="tile tile--yellow"><img src="img/vaso-termico-negro.webp" alt="Vaso térmico negro con logo blanco" style="--h:220px" loading="lazy" /></div><div><h3>Vasos térmicos</h3><p>Mantienen la temperatura y se ven bien en cualquier escritorio.</p></div></article>
+      <article class="prod"><div class="tile tile--magenta"><img src="img/tomatodo-blanco.webp" alt="Mug de viaje blanco con logo" style="--h:240px" loading="lazy" /></div><div><h3>Mugs de viaje</h3><p>Para equipos que se mueven. Tu marca va con ellos.</p></div></article>
+      <article class="prod"><div class="tile tile--cyan"><img src="img/popsocket.webp" alt="Popsocket blanco con logo" style="--h:150px" loading="lazy" /></div><div><h3>Popsockets</h3><p>Pequeños, económicos y siempre a la vista en el celular.</p></div></article>
+      <article class="prod"><div class="tile tile--magenta"><img src="img/libreta-postit.webp" alt="Libretas anilladas con banderitas adhesivas de colores" style="--h:190px" loading="lazy" /></div><div><h3>Libretas con post-it</h3><p>Tapa dura, anillado y banderitas de colores.</p></div></article>
+      <article class="prod"><div class="tile tile--cyan"><img src="img/lapicero.webp" alt="Lapicero plateado con logo" style="--h:230px; rotate:18deg" loading="lazy" /></div><div><h3>Lapiceros</h3><p>El detalle que se reparte en cantidad en ferias y eventos.</p></div></article>
+      <article class="prod"><div class="tile tile--violet"><img src="img/lanyard-credencial.webp" alt="Lanyard verde con credencial de staff" style="--h:260px" loading="lazy" /></div><div><h3>Lanyards y credenciales</h3><p>Para staff, eventos, academias y colegios.</p></div></article>
+      <div class="more">
+        <h3>Y también</h3>
+        <ul><li>Pines y chapitas</li><li>Sellos automáticos</li><li>Enmicados</li><li>Bolsas ecológicas</li><li>Gorras e impresiones</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ POR RUBRO ══════════ -->
+<!-- CONFIRMAR: permiso para mostrar los logos de los clientes en los ejemplos -->
+<section class="sec" id="rubros" aria-labelledby="rubroTitle">
+  <div class="wrap">
+    <h2 id="rubroTitle">¿Qué merch le va a tu negocio?</h2>
+    <p class="lead">Elige tu rubro y mira lo que suelen pedir negocios como el tuyo.</p>
+    <div class="tabs" role="tablist" aria-label="Rubros" id="tabs"></div>
+    <div class="panel" id="panel" role="tabpanel" tabindex="0">
+      <div class="panelMedia" id="panelMedia"><img id="panelImg" src="img/taza-corcho.webp" alt="" /></div>
+      <div class="panelTxt">
+        <h3 id="panelTitle"></h3>
+        <p id="panelText"></p>
+        <ul class="picks" id="panelPicks"></ul>
+        <a class="btn btn--violet" id="panelCta" href="https://wa.me/51989997461" target="_blank" rel="noopener">Cotizar para mi negocio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PEDIDOS REALES ══════════ -->
+<section class="sec pedidos" id="pedidos" aria-labelledby="pedTitle">
+  <div class="wrap pedidosGrid">
+    <figure class="pedidoPhoto">
+      <img src="img/pedido-pines.webp" alt="Pedido de pines rojos personalizados listo para entregar" width="1400" height="1050" loading="lazy" />
+      <span class="tag">Pedido listo para entregar</span>
+    </figure>
+    <div>
+      <h2 id="pedTitle">Pedidos reales, tienda real</h2>
+      <p class="lead">Atendemos a empresas, emprendedores y organizadores de eventos. Ven a ver y tocar los productos en nuestra tienda antes de decidir.</p>
+      <ul class="checks">
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Vista previa del diseño antes de producir</li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Pedidos pequeños o en cantidad</li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Pago con Yape, Plin o en tienda</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CÓMO PEDIR ══════════ -->
+<section class="sec" id="pasos" aria-labelledby="pasosTitle">
+  <div class="wrap">
+    <h2 id="pasosTitle">Así haces tu pedido</h2>
+    <ol class="steps">
+      <li class="step"><h3>Escríbenos</h3><p>Cuéntanos qué producto quieres, cuántas unidades y envíanos tu logo.</p></li>
+      <li class="step"><h3>Recibe tu cotización</h3><p>Te enviamos precios y una vista previa de cómo quedará tu diseño.</p></li>
+      <li class="step"><h3>Aprueba el diseño</h3><p>Con tu visto bueno y el adelanto, empezamos tu pedido.</p></li>
+      <!-- CONFIRMAR: si hacen envíos -->
+      <li class="step"><h3>Recoge tu pedido</h3><p>En nuestra tienda del Centro de Lima o coordinamos el envío.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ CONTACTO ══════════ -->
+<section class="contacto" id="contacto" aria-labelledby="contactoTitle">
+  <div class="wrap">
+    <div class="ctaBox">
+      <div>
+        <h2 id="contactoTitle">Cotiza hoy por WhatsApp</h2>
+        <p class="lead">Completa tus datos y se abrirá WhatsApp con tu mensaje listo. Recuerda adjuntar tu logo en el chat.</p>
+        <ul class="info">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Av. Bolivia 148, C.C. Centro Lima, sótano, pasaje E, tiendas 248 y 249</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><a data-wa href="https://wa.me/51989997461" target="_blank" rel="noopener">989 997 461</a></li>
+          <!-- CONFIRMAR: horario de atención -->
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Horario: [POR CONFIRMAR]</span></li>
+        </ul>
+        <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&query=Centro%20Comercial%20Centro%20Lima%2C%20Av.%20Bolivia%20148%2C%20Lima" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <div class="row2">
+          <div class="field">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" type="text" autocomplete="name" placeholder="Rosa Mendoza" required />
+            <span class="err">Escribe tu nombre para saber cómo dirigirnos a ti.</span>
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span class="opt">(opcional)</span></label>
+            <input id="f-empresa" type="text" autocomplete="organization" placeholder="Barbería El Corte" />
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="f-prod">Producto</label>
+            <select id="f-prod">
+              <option>Tazas</option><option>Vasos térmicos o mugs de viaje</option><option>Lanyards y credenciales</option>
+              <option>Pines y chapitas</option><option>Libretas o cuadernos</option><option>Lapiceros</option>
+              <option>Popsockets</option><option>Sellos</option><option>Kit de regalos corporativos</option><option>Otro o varios productos</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-cant">Cantidad</label>
+            <input id="f-cant" type="text" inputmode="numeric" placeholder="50 unidades" required />
+            <span class="err">Indica una cantidad aproximada, aunque sea un rango.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Detalles <span class="opt">(opcional)</span></label>
+          <textarea id="f-msg" placeholder="Ej.: Tazas negras con nuestro logo para regalar a fin de año."></textarea>
+        </div>
+        <button class="btn btn--wa btn--block" type="submit">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Enviar por WhatsApp
+        </button>
+        <p class="formNote">Tu mensaje llega directo al WhatsApp de la tienda.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footIn">
+      <div>
+        <img src="img/logo-ofimar-blanco.png" alt="OFIMAR Perú S.A.C." width="157" height="56" loading="lazy" />
+        <p>Imprenta y merchandising personalizado en el Centro de Lima.</p>
+      </div>
+      <nav class="footLinks" aria-label="Enlaces del pie de página">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://www.instagram.com/ofimarperu/" target="_blank" rel="noopener">Instagram</a>
+        <!-- Reemplaza por el enlace de la página de Facebook -->
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+    </div>
+    <div class="footBottom">© <span id="year">2026</span> OFIMAR Perú S.A.C. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<a class="waFloat" data-wa href="https://wa.me/51989997461" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<!-- Ícono de WhatsApp reutilizable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.94 9.94 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.18 8.18 0 1 1 6.84 3.73Zm4.5-6.12c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25 0-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.54 10.96 10.96 0 0 0 4.2 3.7c.59.26 1.05.41 1.4.52.6.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+</svg>
+
+<script>
+(function(){
+  var WA = '51989997461';
+  var DEFAULT_MSG = 'Hola OFIMAR, quiero cotizar productos personalizados';
+  var waLink = function(msg){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg); };
+  document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = waLink(DEFAULT_MSG); });
+
+  /* Menú móvil */
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  menuBtn.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('is-open');
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  mobileNav.addEventListener('click', function(e){
+    if (e.target.closest('a')){ mobileNav.classList.remove('is-open'); menuBtn.setAttribute('aria-expanded', false); }
+  });
+
+  /* Video del hero: autoplay silencioso, con respaldo en la foto */
+  var hero = document.querySelector('.hero');
+  var video = document.getElementById('heroVideo');
+  var pauseBtn = document.getElementById('pauseBtn');
+  var icoPause = document.getElementById('icoPause');
+  var icoPlay = document.getElementById('icoPlay');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var small = window.matchMedia('(max-width: 720px)').matches;
+
+  function setPlaying(p){
+    icoPause.hidden = !p; icoPlay.hidden = p;
+    pauseBtn.setAttribute('aria-label', p ? 'Pausar video' : 'Reproducir video');
+  }
+  function loadVideo(src, fallback){
+    video.preload = 'auto';
+    video.autoplay = !reduce;
+    video.src = src;
+    video.addEventListener('error', function onErr(){
+      video.removeEventListener('error', onErr);
+      if (fallback){ loadVideo(fallback, null); }
+      else { video.removeAttribute('src'); video.load(); hero.classList.remove('has-video'); video.style.display = 'none'; }
+    });
+    video.load();
+  }
+  video.addEventListener('loadeddata', function(){
+    hero.classList.add('has-video');
+    if (!reduce){ video.play().then(function(){ setPlaying(true); }).catch(function(){ setPlaying(false); }); }
+    else { setPlaying(false); }
+  });
+  var desk = video.getAttribute('data-src');
+  var mob = video.getAttribute('data-src-mobile');
+  if (small && mob){ loadVideo(mob, desk); } else if (desk){ loadVideo(desk, null); }
+
+  pauseBtn.addEventListener('click', function(){
+    if (video.paused){ video.play(); setPlaying(true); } else { video.pause(); setPlaying(false); }
+  });
+
+  /* Selector por rubro */
+  var rubros = [
+    { name:'Empresas y oficinas', bg:'#6C00FF', img:'img/taza-corcho.webp', h:280, alt:'Taza con base de corcho y logo de empresa',
+      title:'Kits de bienvenida y regalos de fin de año',
+      text:'Detalles útiles que el equipo usa a diario: la taza del escritorio, la libreta de reuniones y el lapicero con el logo.',
+      picks:['Tazas','Libretas','Lapiceros','Mugs de viaje'] },
+    { name:'Barberías y salones', bg:'#FFD400', img:'img/vaso-termico-negro.webp', h:320, alt:'Vaso térmico negro con logo de barbería',
+      title:'Un vaso con tu logo en manos de tus clientes',
+      text:'Para premiar a tus clientes frecuentes o venderlo en el local. Cada vez que lo usan, te recomiendan.',
+      picks:['Vasos térmicos','Gorras','Tomatodos'] },
+    { name:'Academias y estudios', bg:'#FF2D8A', img:'img/lanyard-credencial.webp', h:380, alt:'Lanyard con credencial de staff de un estudio de danza',
+      title:'Credenciales que identifican a tu equipo',
+      text:'Lanyards con la cinta impresa en el color de tu marca y credenciales para staff, profesores y alumnos.',
+      picks:['Lanyards','Credenciales','Pines'] },
+    { name:'Clínicas y salud', bg:'#00C2FF', img:'img/popsocket.webp', h:220, alt:'Popsocket con logo de una clínica',
+      title:'Detalles útiles para pacientes y campañas',
+      text:'Popsockets, lapiceros y libretas que tus pacientes se llevan después de una atención o una campaña de salud.',
+      picks:['Popsockets','Lapiceros','Libretas','Sellos'] },
+    { name:'Eventos y conciertos', bg:'#2A0A6B', img:'img/pedido-pines.webp', photo:true, alt:'Pedido de pines personalizados para un evento',
+      title:'Recuerdos para fans y asistentes',
+      text:'Pines, lanyards y credenciales en cantidad para conciertos, ferias y congresos, listos para la fecha de tu evento.',
+      picks:['Pines','Lanyards','Bolsas ecológicas'] },
+    { name:'Librerías y editoriales', bg:'#6C00FF', img:'img/tomatodo-blanco.webp', h:340, alt:'Mug de viaje blanco con frase de una editorial',
+      title:'Merch para tus lectores más fieles',
+      text:'Mugs de viaje, libretas y bolsas con tu frase o tu logo, para vender o regalar en ferias del libro.',
+      picks:['Mugs de viaje','Libretas','Bolsas ecológicas'] }
+  ];
+  var tabs = document.getElementById('tabs');
+  var panel = document.getElementById('panel');
+  var media = document.getElementById('panelMedia');
+  var pImg = document.getElementById('panelImg');
+
+  rubros.forEach(function(r, i){
+    var b = document.createElement('button');
+    b.className = 'tab'; b.type = 'button'; b.id = 'tab-' + i;
+    b.setAttribute('role','tab'); b.setAttribute('aria-controls','panel');
+    b.textContent = r.name;
+    b.addEventListener('click', function(){ select(i, true); });
+    b.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % rubros.length;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + rubros.length) % rubros.length;
+      if (n !== null){ e.preventDefault(); select(n, true); tabs.children[n].focus(); }
+    });
+    tabs.appendChild(b);
+  });
+
+  function select(i, animate){
+    var r = rubros[i];
+    Array.prototype.forEach.call(tabs.children, function(t, j){
+      t.setAttribute('aria-selected', j === i); t.tabIndex = j === i ? 0 : -1;
+    });
+    if (animate && tabs.scrollWidth > tabs.clientWidth){
+      var t = tabs.children[i];
+      tabs.scrollTo({ left: t.offsetLeft - (tabs.clientWidth - t.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
+    }
+    panel.setAttribute('aria-labelledby', 'tab-' + i);
+    media.style.backgroundColor = r.bg;
+    media.classList.toggle('is-photo', !!r.photo);
+    pImg.src = r.img; pImg.alt = r.alt;
+    pImg.style.setProperty('--h', (r.h || 280) + 'px');
+    document.getElementById('panelTitle').textContent = r.title;
+    document.getElementById('panelText').textContent = r.text;
+    document.getElementById('panelPicks').innerHTML = r.picks.map(function(p){ return '<li>' + p + '</li>'; }).join('');
+    document.getElementById('panelCta').href = waLink('Hola OFIMAR, tengo un negocio del rubro ' + r.name.toLowerCase() + ' y quiero cotizar productos personalizados.');
+    if (animate){ panel.classList.remove('is-swapping'); void panel.offsetWidth; panel.classList.add('is-swapping'); }
+  }
+  select(0, false);
+
+  /* Formulario → WhatsApp */
+  document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true;
+    ['f-nombre','f-cant'].forEach(function(id){
+      var input = document.getElementById(id);
+      var bad = !input.value.trim();
+      input.closest('.field').classList.toggle('is-bad', bad);
+      if (bad && ok) input.focus();
+      if (bad) ok = false;
+    });
+    if (!ok) return;
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var msg = 'Hola OFIMAR, soy ' + v('f-nombre') + (v('f-empresa') ? ' de ' + v('f-empresa') : '') + '.\n' +
+      'Quiero cotizar: ' + v('f-prod') + '\nCantidad: ' + v('f-cant') + (v('f-msg') ? '\nDetalles: ' + v('f-msg') : '');
+    window.open(waLink(msg), '_blank', 'noopener');
+  });
+
+  /* El botón flotante aparece al pasar el hero (ya hay un botón de WhatsApp ahí) */
+  var waFloat = document.querySelector('.waFloat');
+  if ('IntersectionObserver' in window){
+    waFloat.classList.add('is-hidden');
+    new IntersectionObserver(function(entries){
+      waFloat.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, { threshold: 0.35 }).observe(hero);
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
